@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "message": "Este es el primer mensaje"
+    },
+    {
+        "id": 2,
+        "message": "Este es el segundo mensaje"
+    }
+]
