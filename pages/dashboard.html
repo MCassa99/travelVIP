@@ -19,7 +19,6 @@
   <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/css/style.css" rel="stylesheet" />
-  <script src="../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -88,18 +87,21 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">SkyScanner</a>
+                  <a class="dropdown-item" href="#">Matrix</a>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="now-ui-icons users_single-02"></i>
-                  <i id="usuario">Usuario</i>
                   <p>
-                    <span class="d-lg-none d-md-block">User ICON</span>
+                    <i id="usuario">Usuario</i>
                   </p>
+                <div class="dropdown-menu dropdown-menu-right px-2" aria-labelledby="navbarDropdownMenuLink">
+                  <i class="dropdown-item btn btn-light">Editar Ficha de Usuario</i>
+                  <i onclick="closeSession()" class="btn btn-icon-mini btn-danger dropdown-item">Cerrar Sesión</i>
+                </div>
                 </a>
               </li>
             </ul>
@@ -122,7 +124,6 @@
                 <div id="noticias">
 
                 </div>
-                <button class="btn" onclick="showMessages()"></button>
                 <!-- Poner Avisos -->
               </div>
               <div class="card-footer">
@@ -278,7 +279,7 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="https://apis.google.com/js/api.js"></script>
-
+  <script src="../assets/js/script.js" type="module"></script>
 </body>
 
 </html>

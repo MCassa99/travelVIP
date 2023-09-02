@@ -20,8 +20,7 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/demo/demo.css" rel="stylesheet" />
-    <script src="../assets/js/script.js"></script>
+    <link href="./assets/css/style.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -46,19 +45,24 @@
                                         <p>Porfavor inicia sesion con tu usuario.</p>
 
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example11" class="form-control"
+                                            <input type="email" id="usr" class="form-control"
                                                 placeholder="Nombre de Usuario" />
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form2Example22" class="form-control" placeholder="Contraseña"/>
+                                            <input type="password" id="pass" class="form-control"
+                                                placeholder="Contraseña" />
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <a class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                                type="button" href="./pages/dashboard.html">Iniciar Sesión</a>
+                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                onclick="validateUSR_PASS()" type="button">Iniciar Sesión</button>
                                         </div>
                                     </form>
+
+                                    <div id="validate">
+                                        <p id="validate" class="invalid"><b>E-mail / Contraseña Invalido</b></p>
+                                    </div>
 
                                 </div>
                             </div>
@@ -77,14 +81,12 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chart JS -->
     <script src="../assets/js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
@@ -92,14 +94,7 @@
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
     <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-    <script src="../assets/demo/demo.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Javascript method's body can be found in assets/js/demos.js
-            demo.initDashboardPageCharts();
-
-        });
-    </script>
+    <script type="module" src="./assets/js/login.js"></script>
 </body>
 
 </html>

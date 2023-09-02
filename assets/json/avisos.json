@@ -1,10 +1,13 @@
-[
-    {
-        "id": 1,
-        "message": "Este es el primer mensaje"
-    },
-    {
-        "id": 2,
-        "message": "Este es el segundo mensaje"
-    }
-]
+{
+    "avisos": [
+        
+        {
+            "id": 1,
+            "message": "Recuerden que hoy en TravelVIP se estaran dando premios a los mejores vendedores!"
+        },
+        {
+            "id": 2,
+            "message": "Este es el segundo mensaje"
+        }
+    ]
+}

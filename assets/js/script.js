@@ -1,20 +1,18 @@
-// Este archivo se encarga de cargar los mensajes del archivo JSON
+import { message } from './avisos.js'
 
-// Importamos el archivo JSON
-import messages from "../json/avisos.json";
-
-// Creamos una variable para almacenar los mensajes
-const messagesArray = messages;
-
-// Creamos una función para mostrar los mensajes
-function showMessages() {
-    // Recorremos el array de mensajes
-    for (const message of messagesArray) {
-        // Mostramos cada mensaje
-        document.getElementById("noticias").innerHTML += `<li class='mt-2'>${message.message}</li><hr>`;
+window.onload = () => {
+    var userLoggedIn = localStorage.getItem('user');
+    if (!userLoggedIn) {
+        window.location.replace('../../index.html');
+        console.log("No user logged in");
+    } else {
+        console.log(`User logged in: ${userLoggedIn}`);
+        message();
     }
 }
-alert('AAAAAA')
-// Llamamos a la función para mostrar los mensajes
-showMessages();
 
+
+function closeSession() {
+    localStorage.removeItem('user');
+    window.location.replace('../../index.html');
+}
